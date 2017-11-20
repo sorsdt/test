@@ -23,14 +23,38 @@ public class CountingServiceImplTest {
 
     @Test
     public void substract() throws Exception {
+        //Given
+        ComplexObject objectA = new ComplexObject(1, 2);
+        ComplexObject objectB = new ComplexObject(3, 4);
+        ComplexObject expectedObject = new ComplexObject(-2, -2);
+        //When
+        final ComplexObject result = service.substract(objectA, objectB);
+        //Result
+        Assert.assertEquals(expectedObject, result);
     }
 
     @Test
     public void multiply() throws Exception {
+        //Given
+        ComplexObject objectA = new ComplexObject(1, 2);
+        ComplexObject objectB = new ComplexObject(3, 4);
+        ComplexObject expectedObject = new ComplexObject(3, 8);
+        //When
+        final ComplexObject result = service.multiply(objectA, objectB);
+        //Result
+        Assert.assertEquals(expectedObject, result);
     }
 
     @Test
     public void divide() throws Exception {
+        //Given
+        ComplexObject objectA = new ComplexObject(1, 2);
+        ComplexObject objectB = new ComplexObject(3, 4);
+        ComplexObject expectedObject = new ComplexObject(0, 0);
+        //When
+        final ComplexObject result = service.divide(objectA, objectB);
+        //Result
+        Assert.assertEquals(expectedObject, result);
     }
 
 }

@@ -3,17 +3,17 @@ package calculator.domain;
 public class ComplexObject {
     private int valueA;
     private int valueB;
+    private Service service;
+
+    public ComplexObject() {
+    }
 
     public ComplexObject(int valueA, int valueB) {
         this.valueA = valueA;
         this.valueB = valueB;
     }
 
-    public ComplexObject() {
-    }
-
     @Override
-
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -32,7 +32,6 @@ public class ComplexObject {
     }
 
     public int getValueA() {
-
         return valueA;
     }
 
