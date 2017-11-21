@@ -6,11 +6,18 @@ public class ComplexObject {
     private Service service;
 
     public ComplexObject() {
+        service = Service.FIRST;
     }
 
     public ComplexObject(int valueA, int valueB) {
+        this();
         this.valueA = valueA;
         this.valueB = valueB;
+    }
+
+    public ComplexObject(int valueA, int valueB, Service service) {
+        this(valueA, valueB);
+        this.service = service;
     }
 
     @Override
@@ -45,5 +52,13 @@ public class ComplexObject {
 
     public void setValueB(int valueB) {
         this.valueB = valueB;
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
     }
 }
